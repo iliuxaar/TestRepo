@@ -14,6 +14,7 @@ object TestHelper {
     public fun helpImage(context: Context, url: String, imageView: ImageView){
         Glide.with(context)
             .load(url)
+            .placeholder(R.drawable.ic_placeholder)
             .into(imageView)
     }
 

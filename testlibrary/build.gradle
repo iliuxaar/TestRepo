@@ -58,7 +58,7 @@ ext {
 
     publishedGroupId = 'com.ar.testrepo' // Group ID of the SDK which will be added in implementation line of gradle
     artifact = 'testlibrary' // Artifact ID of the SDK which will be added in implementation line of gradle
-    libraryVersion = '0.0.3' // Version of the library you created in Bintray
+    libraryVersion = '0.0.4' // Version of the library you created in Bintray
 
     libraryName = 'test' // It is generally the module name
     libraryDescription = 'test' // Small description of the library
