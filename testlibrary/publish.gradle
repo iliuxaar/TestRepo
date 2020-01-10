@@ -2,13 +2,13 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
 group 'com.ar.testrepo'
-version '1.0.0'
+version '0.0.1'
 
 publishing {
     publications {
         Production(MavenPublication) {
-            artifact("$buildDir/ArModule.aar")  {
-                builtBy tasks.getByName("assembleRelease")
+            artifact("publish/ArModule.aar")  {
+                builtBy tasks.getByName("assemble")
             }
             groupId
             artifactId 'testlibrary'
@@ -43,11 +43,11 @@ bintray {
     override = true
     pkg {
         repo = 'maven'
-        name = 'AwesomeLib'
-        description = "It's an awesome lib"
+        name = 'com.ar.testrepo:testlibrary'
+        description = "test"
         publicDownloadNumbers = true
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/prof18/AwesomeLib'
+        vcsUrl = 'https://github.com/iliuxaar/TestRepo'
         version {
             name = this.version
             desc = "Version ${this.version}"
